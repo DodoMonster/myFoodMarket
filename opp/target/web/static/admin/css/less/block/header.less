@@ -1,0 +1,28 @@
+//out: ../../header.css
+@import "variables.less";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: @font-family-weiruan;
+    font-size: @main-font-size;
+    color:@header-color;
+}
+.header-wrapper{
+    height:60px;
+    line-height: 60px;
+    .titleName{
+        padding-left: 10px;
+    }
+    .component{
+        float: right;
+        span{
+            margin-right: 20px;
+        }
+        .fa{
+            font-size: 20px;
+        }
+    }
+}

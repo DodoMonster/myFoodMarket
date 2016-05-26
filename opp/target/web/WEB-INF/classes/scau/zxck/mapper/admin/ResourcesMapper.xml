@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scau.zxck.dao.admin.ResourcesDao">
+    <cache/>
+
+    <insert id="add" parameterType="SQLAdapter">
+        ${sql}
+    </insert>
+
+    <update id="update" parameterType="SQLAdapter">
+        ${sql}
+    </update>
+
+    <delete id="delete" parameterType="SQLAdapter">
+        ${sql}
+    </delete>
+
+    <resultMap id="resourcesResult" type="Resources">
+        <result column="parent_id" property="parentId" />
+        <result column="permission_id" property="permissionId"/>
+    </resultMap>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="find" parameterType="SQLAdapter" resultMap="resourcesResult" >
+        ${sql}
+    </select>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="list" parameterType="SQLAdapter" resultMap="resourcesResult" >
+        ${sql}
+    </select>
+
+    <select id="count" parameterType="SQLAdapter" resultType="long" >
+        ${sql}
+    </select>
+
+    <select id="findPermissionByUrl" parameterType="String" resultMap="resourcesResult">
+        SELECT DISTINCT url,permission_id from apt_resource where url= #{url};
+    </select>
+
+</mapper>

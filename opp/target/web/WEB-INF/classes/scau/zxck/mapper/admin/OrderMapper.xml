@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scau.zxck.dao.admin.OrderDao">
+    <cache/>
+
+    <resultMap id="orderResult" type="Order">
+        <result column="user_id" property="userId"></result>
+        <result column="commodity_id" property="commodityId"></result>
+        <result column="shipping_address" property="shippingAddress"></result>
+        <result column="buyer_message" property="buyerMessage"></result>
+    </resultMap>
+
+    <insert id="add" parameterType="SQLAdapter">
+        ${sql}
+    </insert>
+
+    <update id="update" parameterType="SQLAdapter">
+        ${sql}
+    </update>
+
+    <delete id="delete" parameterType="SQLAdapter">
+        ${sql}
+    </delete>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="find" parameterType="SQLAdapter" resultMap="orderResult" >
+        ${sql}
+    </select>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="list" parameterType="SQLAdapter" resultMap="orderResult" >
+        ${sql}
+    </select>
+
+    <select id="count" parameterType="SQLAdapter" resultType="long" >
+        ${sql}
+    </select>
+
+    <select id="selectOrderByIdentifier" parameterType="String" resultMap="orderResult">
+        SELECT * FROM apt_order WHERE apt_order.identifier = #{identifier};
+    </select>
+
+
+</mapper>

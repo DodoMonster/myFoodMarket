@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  overflow-x: hidden;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select {
+  font-family: 'Microsoft YaHei' !important;
+  padding-left: 3px !important;
+}
+a {
+  text-decoration: none;
+}
+ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+/*-font-type-*/
+/*font size*/
+/*font-color*/
+/*-background-color-*/
+/*-border-color-*/
+/*-div Size-*/
+/*border-radius size*/
+/*margin padding*/
+/*font-weight*/
+.layui-layer-title {
+  text-align: left !important;
+}
+.layui-layer-content {
+  padding: 0 !important;
+  font-size: 15px !important;
+  top: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  height: 30px!important;
+}
+.layui-layer-btn a {
+  font-weight: lighter !important;
+}
+/*
+@name: goodsAdmin.less
+@out:goodsAdmin.css
+@description: Style of top 商品管理页面
+@require: bootstrap.min.css
+@author: DodoMonster(dodomonster@qq.com)
+*/
+/*--- start 商品管理页面的css ---*/
+.wrapper {
+  border: 1px solid #fff;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+}
+.head {
+  height: 50px;
+  line-height: 50px;
+  color: #6BCAC6;
+  font-size: 18px;
+}
+#pageName {
+  width: 100px;
+  float: left;
+}
+.active {
+  border-right: 2px solid #12B5B0;
+}
+#searchBox {
+  float: left;
+  font-size: 10px;
+}
+#searchBox input {
+  height: 25px;
+  line-height: 25px;
+  width: 210px;
+  color: #000;
+  border: 1px solid #6BCAC6;
+}
+#searchBox #searchBtn {
+  width: 30px;
+  height: 25px;
+  background-color: #6BCAC6;
+  color: #ffffff;
+  line-height: 25px;
+  text-align: center;
+  margin-left: -5px;
+}
+/*--- start banner ---*/
+.banner {
+  background-color: #EEEEEE;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+.banner label {
+  font-weight: normal;
+  margin: auto 15px;
+}
+.banner select {
+  /*将默认的select选择框样式清除*/
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  line-height: 20px;
+  width: 120px;
+  font-size: 13px;
+  border: none;
+  margin-right: 40px;
+}
+.banner select option {
+  font-size: 13px;
+}
+.banner .glyphicon-chevron-down {
+  color: #6BCAC6;
+  position: relative;
+  left: -60px;
+  font-size: 5px !important;
+  font-weight: lighter !important;
+}
+/*--- end banner ---*/
+/*---start 下拉菜单---*/
+.btn-group .selectTitle {
+  float: left;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+.btn-group .select-classiy-nav,
+.btn-group .select-shopname-nav {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+}
+.btn-group .select-classiy-nav button,
+.btn-group .select-shopname-nav button {
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  width: 100px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.btn-group .select-classiy-nav .classify-title,
+.btn-group .select-shopname-nav .classify-title,
+.btn-group .select-classiy-nav .shopname-title,
+.btn-group .select-shopname-nav .shopname-title {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.btn-group .select-classiy-nav .dropdown-toggle,
+.btn-group .select-shopname-nav .dropdown-toggle {
+  width: 30px;
+  margin-left: -5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group .dropdown-menu {
+  left: 87px;
+  top: 73%;
+}
+/*---end 下拉菜单---*/
+/*---start 子分类div---*/
+#subNav {
+  background-color: #ffffff;
+  margin-left: 7%;
+  position: absolute;
+  z-index: 99;
+  width: 90%;
+  display: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#subNav .all-btn {
+  font-weight: normal;
+  float: right;
+  margin-right: 100px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 25px;
+  line-height: 22px;
+  border: 1px solid #d2d2d2;
+  border-radius: 2px;
+}
+#subNav .all-btn em {
+  font-style: normal;
+}
+#subNav .glyphicon-remove {
+  float: right;
+  margin-right: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+#mainNav {
+  width: 120px;
+  float: left;
+  margin-top: -10px;
+  margin-left: 8px;
+  padding-right: 5px;
+}
+#mainNav li {
+  height: 80px;
+  font-size: 15px;
+  line-height: 110px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+#mainNav li a {
+  display: inline-block;
+  width: 115px;
+  height: 35px;
+  line-height: 23px;
+  color: #000;
+}
+.subnav {
+  border-bottom: 1px solid #6BCAC6;
+  height: 135px;
+  padding-left: 15px;
+  margin-left: 20px;
+}
+.subnav p {
+  font-weight: bold;
+  font-size: 13px;
+}
+.subnav:last-child {
+  border-bottom: none;
+}
+.subNavDiv {
+  margin-left: 120px;
+  width: 90%;
+  display: none;
+}
+.subNavDiv li {
+  font-size: 13px;
+  float: left;
+  margin-right: 25px;
+}
+.subNavDiv:last-child {
+  border-bottom: none;
+}
+/*---end 子分类div---*/
+/*---start 商品列表table---*/
+table {
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  top: 0;
+  z-index: 9;
+  margin-bottom: 20px;
+}
+table thead th {
+  font-weight: normal;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+table tbody {
+  background-color: #F5F5F5;
+}
+table tbody #goodsName,
+table tbody #goodsId {
+  width: 100px;
+}
+table tbody #goodsDesc {
+  width: 300px;
+}
+table tbody #goodsTag {
+  width: 200px;
+}
+table tbody td {
+  min-width: 80px;
+  height: 75px;
+  margin-top: 15px;
+  vertical-align: middle !important;
+}
+table tbody td img {
+  width: 80px;
+  height: 60px;
+}
+table tbody td p {
+  margin-top: 15px;
+}
+table tbody td .glyphicon {
+  top: 0;
+}
+table tbody td .delete-btn {
+  float: right;
+  font-size: 10px;
+  font-weight: lighter;
+}
+table tbody td .edit-btn {
+  top: -15px;
+  margin-right: 5px;
+}
+table tbody td .checkbox {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+table tbody td .checkbox span {
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #eee;
+  margin-top: -1px;
+}
+table tbody td .checkbox .open-box {
+  background-color: #6BCAC6;
+  left: 9px;
+  transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  /* Firefox 4 */
+  -webkit-transition: left 0.2s;
+  /* Safari 和 Chrome */
+  -o-transition: left 0.2s;
+  /* Opera */
+}
+table tbody td .checkbox .close-box {
+  background-color: #ccc;
+  left: -9px;
+  transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  /* Firefox 4 */
+  -webkit-transition: left 0.2s;
+  /* Safari 和 Chrome */
+  -o-transition: left 0.2s;
+  /* Opera */
+}
+/*---end 商品列表table---*/
+/*--- start 分页---*/
+#pagination {
+  float: right;
+  margin-right: 50px;
+  font-size: 14px;
+}
+#pagination em {
+  font-style: normal;
+}
+#pagination input {
+  width: 25px;
+  height: 20px;
+  line-height: 15px;
+}
+#pagination #gotoBtn {
+  font-size: 12px;
+  display: inline-block;
+  width: 26px;
+  height: 25px;
+  line-height: 25px;
+  padding: 1px 3px;
+  background-color: #12B5B2;
+  color: #ffffff;
+  border-radius: 3px;
+}
+#prevNext .prev-next-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  text-align: center;
+  background-color: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  font-size: 3px;
+  color: #ffffff;
+}
+#nextBtn {
+  background-color: #ffffff !important;
+  color: #AAAAAA !important;
+}
+.totalNum,
+.pageNum,
+#prevNext,
+.goto {
+  margin-right: 30px;
+}
+/*--- end 分页---*/
+/*--- end 商品管理页面的css ---*/

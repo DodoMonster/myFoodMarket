@@ -1,0 +1,33 @@
+/*-font-type-*/
+/*font size*/
+/*font-color*/
+/*-background-color-*/
+/*-div Size-*/
+/*border-radius size*/
+/*margin padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  color: #888888;
+}
+.header-wrapper {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.header-wrapper .titleName {
+  padding-left: 15%;
+}
+.header-wrapper .component {
+  float: right;
+}
+.header-wrapper .component span {
+  margin-right: 20px;
+}
+.header-wrapper .component .fa {
+  font-size: 20px;
+}

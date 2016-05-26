@@ -1,0 +1,38 @@
+//out:../home.css
+@import "block/public.less";
+@import "block/variables.less";
+
+body{
+    background-color:#e0e0e0;
+}
+#welcome{
+    border:3px solid #ccc;
+    background-color: @home-bacg;
+    border-radius: 5px;
+    width:@home-div-width;
+    height:0;
+    line-height: @home-div-height;
+    margin:0 auto;
+    font-size: 30px;
+    opacity: 0;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    margin-top: 8%;
+    transition: height 1s,opacity 2s;
+    -moz-transition:height 2s;
+    -webkit-transition:height 1s,opacity 2s;
+    -o-transition:height 2s,opacity 2s;
+}
+.show{
+    height:@home-div-height !important;
+    opacity:1 !important;
+}
+#footer{
+    position: absolute;
+    // position: fixed;
+    bottom: 0;
+    width:100%;
+    p{
+        text-align: center;
+    }
+}

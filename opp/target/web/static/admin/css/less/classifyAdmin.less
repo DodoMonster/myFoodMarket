@@ -1,0 +1,148 @@
+//out:../classifyAdmin.css
+@import "block/public.less";
+@import "block/publicLayer.less";
+@import "block/variables.less";
+body{
+    background-color: @main-bacg;
+    color:@main-color;
+    text-align: center;
+}
+a{
+    color: @main-a-color;
+}
+ul li{
+    float: left;
+}
+
+input{
+    font-family: @font-family-weiruan;
+    font-size: 15px;
+}
+li.active{
+    background-color: #8f8787;
+}
+a.active{
+    border-left: 2px solid #8f8787;
+    color:#ffffff;
+}
+// #dragBtn{
+//     display: inline-block;
+//     width:30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     background-color: #147ebb;
+//     float: right;
+// }
+.items-container{
+    width:1100px;
+    margin:30px auto;
+    .row{
+        width:100%;
+        margin: 0 auto;
+    }
+    .items-wrapper{
+        float: left;
+        width: 465px;
+        background-color: #ffffff;
+        height: 200px;
+        margin-bottom: 30px;
+        input{
+            padding-left: 10px;
+        }
+        .content-header{
+            height:40px;
+            background-color: #147ebb;
+            line-height: 40px;
+            color:#ffffff;
+            margin-bottom: 15px;
+            div.opt-btn{
+                float: right;
+                display: none;
+                margin-right: 10px;
+                span{
+                    display: inline-block;
+                    width: 45px;
+                    height: 25px;
+                    font-size: 13px;
+                    border-radius: @classify-tag-border-radius;
+                    line-height: 25px;
+                    border: 1px solid #fff;
+                }
+            }
+            .classify-name{
+                float: left;
+                margin-left: 10px;
+                .input-name{
+                    height:30px;
+                    width:81px;
+                    outline: 0;
+                    border:1px solid #147ebb;
+                    border-radius: @classify-tag-border-radius;
+                    font-size: 15px;
+                    font-family: @font-family-weiruan;
+                }
+            }
+            .opt{
+                float: right;
+                margin-right: 10px;
+                i{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .classify-items{
+            margin-left: 36px;
+            width: 415px;
+            position: relative;
+            overflow: hidden;
+            height:125px;
+            li{
+                height:@classify-items-height;
+                line-height: @classify-items-height;
+                width:@classify-items-width;
+                border:1px solid #eee;
+                border-radius: @classify-tag-border-radius;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                .little-tag-name{
+                    display: inline-block;
+                    width: 64px;
+                    height: 25px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-right: 10px;
+                    .input-little-tag{
+                        outline: none;
+                        border: none;
+                        font-size: 15px;
+                        width: 62px;
+                        height: 30px;
+                        line-height: 30px;
+                        border-radius: 3px;
+                        margin-left: -7px;
+                    }
+                }
+                i{
+                    display: none;
+                    font-size: 10px;
+                    font-weight: 100;
+                    position: relative;
+                    top: -15px;
+                    left: -8px;
+                    margin-right: -10px;
+                    /* margin-top: 30px; */
+                    overflow: visible !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+#footer{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    bottom: 15px;
+}

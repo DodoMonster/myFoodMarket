@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我家菜市后台管理-商品管理</title>
+        <link rel="stylesheet" href="../../../public/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/goodsAdmin.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!--start header-->
+            <header>
+                <!--start head-->
+                <div class="head">
+                    <span id="pageName">商品列表</span>
+                    <div id="searchBox">
+                        <span><input type="text" placeholder="请输入商品名称/类" id="inputSearch"></span>
+                        <span class="glyphicon glyphicon-search" id="searchBtn"></span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="banner">
+                    <!--start 下拉菜单-->
+                    <div class="btn-group">
+                        <span class="selectTitle">商品分类</span>
+                        <div class="select-classiy-nav">
+                            <button type="button" class="btn btn-default classify-title">全部</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <span class="selectTitle">商铺名称</span>
+                        <div class="select-shopname-nav">
+                            <button type="button" class="btn btn-default shopname-title">水果</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--end 下拉菜单-->
+
+                    <!--start 子分类-->
+                    <div id="subNav">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <span class="all-btn">全部<em class="mainNav">水果</em></span>
+                        <ul id="mainNav">
+                            <li><a href="#">水果</a></li>
+                            <li><a href="#">蔬菜</a></li>
+                            <li><a href="#">肉类</a></li>
+                            <li><a href="#">干货</a></li>
+                            <li><a href="#">水产</a></li>
+                        </ul>
+                        <div id="fruit" class="subNavDiv">
+                            <div id="sort1" class="subnav">
+                                <p>酸性</p>
+                                <ul>
+                                    <li id="11">苹果</li>
+                                    <li id="12">梨</li>
+                                    <li id="13">苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                </ul>
+                            </div>
+                            <div id="sort2" class="subnav">
+                                <p>酸性</p>
+                                <ul>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                </ul>
+                            </div>
+                            <div id="sort3" class="subnav">
+                                <p>酸性</p>
+                                <ul>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                    <li>苹果</li>
+                                    <li>梨</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end 子分类-->
+                </div>
+                <!--end head-->
+            </header>
+            <!--end header-->
+
+            <!--end 商品列表table-->
+            <section>
+                <div id="tableContainer">
+                    <table class="table table-striped">
+                        <thead>
+                            <th id="num">序号</th>
+                            <th id="goodsImg">商品图</th>
+                            <th id="goodsName">商品名</th>
+                            <th id="goodsId">商品编号</th>
+                            <th id="price">价格</th>
+                            <th id="stock">库存</th>
+                            <th id="goodsDesc">商品描述</th>
+                            <th id="goodsTag">商品标签</th>
+                            <th id="opt"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td><img src="../../images/goods-img.jpg" alt="商品图1"></td>
+                                <td>澳洲生鲜牛排</td>
+                                <td>D9J-82425</td>
+                                <td>28.80</td>
+                                <td>99</td>
+                                <td>麻辣烫很好吃麻辣烫很好吃麻辣烫很好吃很好吃很好吃很好吃</td>
+                                <td>新鲜生鲜/神级羊肉</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove delete-btn"></span>
+                                    <p>
+                                        <span class="glyphicon glyphicon-pencil edit-btn"></span>
+                                        <span class="checkbox">
+                                            <span class="open-box"></span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td><img src="../../images/goods-img.jpg" alt="商品图1"></td>
+                                <td>澳洲生鲜牛排</td>
+                                <td>D9J-82425</td>
+                                <td>28.80</td>
+                                <td>99</td>
+                                <td>麻辣烫很好吃麻辣烫很好吃麻辣烫很好吃很好吃很好吃很好吃</td>
+                                <td>新鲜生鲜/神级羊肉</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove delete-btn"></span>
+                                    <p>
+                                        <span class="glyphicon glyphicon-pencil edit-btn"></span>
+                                        <span class="checkbox">
+                                            <span class="open-box"></span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td><img src="../../images/goods-img.jpg" alt="商品图1"></td>
+                                <td>澳洲生鲜牛排</td>
+                                <td>D9J-82425</td>
+                                <td>28.80</td>
+                                <td>99</td>
+                                <td>麻辣烫很好吃麻辣烫很好吃麻辣烫很好吃很好吃很好吃很好吃</td>
+                                <td>新鲜生鲜/神级羊肉</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove delete-btn"></span>
+                                    <p>
+                                        <span class="glyphicon glyphicon-pencil edit-btn"></span>
+                                        <span class="checkbox">
+                                            <span class="open-box"></span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td><img src="../../images/goods-img.jpg" alt="商品图1"></td>
+                                <td>澳洲生鲜牛排</td>
+                                <td>D9J-82425</td>
+                                <td>28.80</td>
+                                <td>99</td>
+                                <td>麻辣烫很好吃麻辣烫很好吃麻辣烫很好吃很好吃很好吃很好吃</td>
+                                <td>新鲜生鲜/神级羊肉</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove delete-btn"></span>
+                                    <p>
+                                        <span class="glyphicon glyphicon-pencil edit-btn"></span>
+                                        <span class="checkbox">
+                                            <span class="open-box"></span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td><img src="../../images/goods-img.jpg" alt="商品图1"></td>
+                                <td>澳洲生鲜牛排</td>
+                                <td>D9J-82425</td>
+                                <td>28.80</td>
+                                <td>99</td>
+                                <td>麻辣烫很好吃麻辣烫很好吃麻辣烫很好吃很好吃很好吃很好吃</td>
+                                <td>新鲜生鲜/神级羊肉</td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove delete-btn"></span>
+                                    <p>
+                                        <span class="glyphicon glyphicon-pencil edit-btn"></span>
+                                        <span class="checkbox">
+                                            <span class="open-box"></span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!--end 商品列表table-->
+
+            <!--start 分页-->
+            <div id="pagination">
+                <span class"totalNum">共<em id="totalNum">99</em>条</span>
+                <span class="pageNum">
+                    <em id="nowPage">3</em>/<em id="totalPage">8</em>
+                </span>
+                <span id="prevNext">
+                    <span id="prevBtn" class="prev-next-btn">＜</span>
+                    <span id="nextBtn" class="prev-next-btn">＞</span>
+                </span>
+                <span class="goto">
+                    到第 <input type="text" id="gotoPage"> 页
+                    <span id="gotoBtn">GO</span>
+                </span><!--需要限制输入只能为>0的数字-->
+            </div>
+            <!--end 分页-->
+        </div>
+
+    </body>
+    <script src="../../../public/js/jquery-2.1.3.min.js"></script>
+    <script src="../../../public/layer/layer.js"></script>
+    <script src="../../../public/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../js/goodsAdmin.js"></script>
+    <!-- <script src="../../../public/js/mousewheel.min.js"></script>
+    <script src="../../../public/js/scrollbar.min.js"></script> -->
+</html>

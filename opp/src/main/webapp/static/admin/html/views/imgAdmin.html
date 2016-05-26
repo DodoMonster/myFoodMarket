@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我家菜市后台管理-图片管理</title>
+        <link rel="stylesheet" href="../../css/imgAdmin.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!--start header-->
+            <header>
+                <h1>滚动图片管理</h1>
+            </header>
+            <!--end header-->
+
+            <!--start 滚动图片容器-->
+            <section>
+                <div id="imgContainer">
+                    <ul id="imgGallery">
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图1" id="1">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">修改</span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图2" id="2">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">
+                                    <!-- <input type="file" name='goodsImg' accept="image/gif"> -->
+                                    修改
+                                </span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图3" id="3">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">
+                                    <!-- <input type="file" name='goodsImg' accept="image/gif"> -->
+                                    修改
+                                </span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图4" id="4">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">
+                                    <!-- <input type="file" name='goodsImg' accept="image/gif"> -->
+                                    修改
+                                </span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图5">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">
+                                    修改
+                                </span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                        <li>
+                            <img src="../../images/goods-img.jpg" alt="商品图6">
+                            <div id="optImg">
+                                <span class="modify-btn" accept="image/gif">
+                                    <!-- <input type="file" name='goodsImg' accept="image/gif"> -->
+                                    修改
+                                </span> /
+                                <span class="delete-btn">删除</span>
+                            </div>
+                            <span class="assosiate-btn">关联商品店铺</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" id="newImg">
+                    新增滚动图片
+                </a>
+            </section>
+            <!--end 滚动图片容器-->
+            <div id="overlay"></div>
+            <!--start 图片修改弹框-->
+            <section>
+                <form class="bomb-box modify-box" id="modifyDiv" name="modifyImg" action="" method="post">
+                    <div class="modify-header">
+                        <h2>选择图片</h2>
+                        <i class="close-box">X</i>
+                    </div>
+                    <div class="modify-content">
+                        <div id="preview"></div><!--图片预览处-->
+                        <div id="chooseImg">
+                            <input type="hidden" class="beModifyImg"><!--被修改的图片的id所在处-->
+                            <a href="#"  class="uploadImg"><!--选择图片上传按钮-->
+                                <input type="file" name='modifyImg' accept="image" onchange="previewImage(this)" >
+                                选择图片
+                            </a>
+                            <span class="fileTip"></span><!--上传图片信息提示处-->
+                            <a  href="#" onclick="document.getElementById('modifyDiv').submit();return false" id="confirm-modify-btn" class="opt-btn">确定</a><!--确定修改上传图片-->
+                            <a href="#" id="cancel-modify-btn" class="opt-btn">取消</a><!--取消修改上传图片-->
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+            </section>
+            <!--end图片修改弹框-->
+
+            <!--start 关联商铺按钮弹框-->
+            <section>
+                <!--start 关联商铺弹框-->
+                <div id="modelWrapper">
+                    <div id="linkDiv" class="bomb-box">
+                        <!--start 关联店铺头部-->
+                        <div id="linkDivHeader">
+                            <div class="nav-opt-btn">
+                                <span class="nav-btn goods-nav">商品</span>
+                                <span class="nav-btn shop-nav">店铺</span>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" id="search">
+                                <span class="searchBtn"></span>
+                            </div>
+                        </div>
+                        <!--end 关联店铺头部-->
+
+                        <!--start 关联店铺导航-->
+                        <div id="linkDivNav">
+                            <!--start 商品分类-->
+                            <ul id="goodsNav" class="linkNav">
+                                <li>分组：</li>
+                                <li><a href="#">水果</a></li>
+                                <li><a href="#">蔬菜</a></li>
+                                <li><a href="#">肉类</a></li>
+                                <li><a href="#">干货</a></li>
+                                <li><a href="#">水产</a></li>
+                            </ul>
+                            <!--end 商品分类-->
+
+                            <!--start 店铺分类-->
+                            <ul id="shopNav" class="linkNav">
+                                <li>分组：</li>
+                                <li><a href="#">默认</a></li>
+                                <li><a href="#">A组</a></li>
+                                <li><a href="#">B组</a></li>
+                                <li><a href="#">C组</a></li>
+                            </ul>
+                            <!--end 店铺分类-->
+
+                            <!--start 子分类-->
+                            <div id="navDiv"></div>
+                            <!--end 子分类-->
+                        </div>
+                        <!--end 关联店铺导航-->
+
+                        <!--start 店铺名列表-->
+                        <div id="shopList">
+                            <ul>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigarrigarrigarrigarrigarrigar">rigarrigarrigarrigarrigarrigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+
+                                <li>
+                                    <a href="#" class="shopName" title="rigar">rigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigar">rigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigar">rigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigar">rigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                                <li>
+                                    <a href="#" class="shopName" title="rigar">rigar</a>
+                                    <input type="radio" name="radio1" value="radio">
+                                </li>
+                            </ul>
+                            <!--start 分页-->
+                            <div id="pagination">
+                                <span class"totalNum">共<em id="totalNum">99</em>条</span>
+                                <span class="pageNum">
+                                    <em id="nowPage">1</em>/<em id="totalPage">8</em>
+                                </span>
+                                <span id="prevNext">
+                                    <span id="prevBtn" class="prev-next-btn">＜</span>
+                                    <span id="nextBtn" class="prev-next-btn">＞</span>
+                                </span>
+                                <span class="goto">
+                                    到第 <input type="text" id="gotoPage"> 页
+                                    <span id="gotoBtn">GO</span>
+                                </span><!--需要限制输入只能为>0的数字-->
+                            </div>
+                            <!--end 分页-->
+                        </div>
+                        <!--end 店铺名列表-->
+
+                        <div id="shopFooter">
+                            <span class="confirm-shop">确定</span>
+                            <span class="cancel-shop">取消</span>
+                        </div>
+                    </div>
+                    <!--end  关联店铺弹框-->
+                <div>
+            </section>
+            <!--end 关联商铺按钮弹框-->
+        </div>
+
+    </body>
+    <script src="../../../public/js/jquery-2.1.3.min.js"></script>
+    <script src="../../../public/layer/layer.js"></script>
+    <script src="../../js/imgAdmin.js"></script>
+</html>

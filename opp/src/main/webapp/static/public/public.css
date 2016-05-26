@@ -1,0 +1,110 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+body {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+p {
+    margin: 0 0 10px;
+}
+a {
+    color: currentColor;
+    font-family: inherit;
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+table>tbody>tr>td, 
+table>tbody>tr>th, 
+table>tfoot>tr>td, 
+table>tfoot>tr>th, 
+table>thead>tr>td, 
+table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+table>caption+thead>tr:first-child>td, 
+table>caption+thead>tr:first-child>th, 
+table>colgroup+thead>tr:first-child>td, 
+table>colgroup+thead>tr:first-child>th, 
+table>thead:first-child>tr:first-child>td, 
+table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+table>tbody>tr:hover {
+    background-color: #f5f5f5;
+}
+
+input[type="search"] {
+    height: 32px;
+    line-height: 32px;
+    width: 250px;
+    font-family: inherit;
+    padding-left: 6px;
+}
+
+.btn {    
+    width: 78px;
+    height: 32px;
+    border: 0;
+    color: #fff;
+    font-family: inherit;
+    background-color: rgb(76, 142, 250);
+    cursor: pointer;
+}
+
+.search-box {
+    float: right;
+    margin-top: 20px;
+}
+.search-box>.iconfont {
+    position: relative;
+    left: -30px;
+    font-size: 12px;
+    line-height: 32px;  
+}
+.search-box>input[type="submit"] {
+    position: relative;
+    left: -20px;
+}
+#searchbox{
+    float:right;
+    margin-top:20px;
+}

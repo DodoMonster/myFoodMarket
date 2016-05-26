@@ -1,0 +1,70 @@
+html,body,nav {
+	height: 100%;
+}
+.icon-white {
+	color: #fff;
+}
+.icon-dark {
+	color: #aaa;
+}
+header {
+	background-color: #2b7dad;
+	height: 80px;
+	line-height: 80px;
+	width: 100%;
+	color: #fff;
+}
+header h1 {
+	
+	float: left;
+	margin-left: 30px;
+}
+header .user-box {
+	float: right;
+	margin-right: 30px;
+	position: relative;
+}
+header .iconfont {
+	font-size: 24px;
+}
+header .icon-dot {
+	font-size: 28px;
+	color: red;
+	position: relative;
+	left: -18px;
+	top: -7px;
+}
+
+nav {
+	width: 13%;
+	height: 100%;
+	background-color: #262a33;
+	color: #fff;
+	text-align: center;
+	min-width: 140px;
+	position: absolute;
+	float: left;
+}
+nav li a {
+	display: block;
+	color: currentColor;
+	padding: 12px;
+	border-bottom: 1px solid #aaa;
+}
+nav li a:hover {
+	background-color: #444e57;
+}
+.subnav {
+	display: none;
+}
+.subnav li a {
+	background-color: #0a0b0c; 
+}
+#adminFrame {
+	width: 87%;
+	min-width: 500px;
+	height:-moz-calc(100% - 80px);
+	height:-webkit-calc(100% - 80px);
+	height: calc(100% - 80px);
+}
+

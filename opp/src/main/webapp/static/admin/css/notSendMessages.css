@@ -1,0 +1,226 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	font-family: 'Microsoft YaHei';
+	font-size: 16px;
+	overflow-x: hidden;
+	width:98%;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select {
+  font-family: 'Microsoft YaHei' !important;
+  padding-left: 3px !important;
+}
+a {
+  text-decoration: none;
+}
+ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+.header{
+	margin: 0 auto;
+	height:50px;
+}
+.header a{
+	display: inline-block;
+	border: 1px solid #d2d2d2;
+	padding:3px 7px;
+	margin: 12px 7px 12px 8px;
+	border-radius: 3px;
+	font-size: 14px;
+	color:#B5B5B5;
+}
+.header span{
+	color: #B5B5B5;
+}
+.header a:hover,.header a:active{
+	background: #B5B5B5;
+	color: #fff;
+}
+.header .nav-opt-btn{
+	float: right;
+}
+.header .searchBox{
+	float: right;
+	width:200px;
+	height: 28px;
+	margin:12px 0 12px 12px;
+}
+.header .searchBox input{
+	height: 24px;
+	width:150px;
+	float: left;
+}
+.header .searchBox .searchBtn{
+	background: url(../images/search-btn.png) no-repeat center center;
+	width:30px;
+	height:28px;
+	border: none;
+	border: 1px solid #B5B5B5;
+	border-left: none;
+	float: left;
+}
+.content .messageList{
+	width:900px;
+	margin:43px auto 0;
+	height: 800px;
+}
+.content .messageList ul{
+	margin-bottom: 100px;
+}
+.content .messageList li{
+	width:96%;
+	border: 1px solid #d2d2d2;
+	height: 155px;
+	margin:0 auto;
+	margin-bottom: 30px;
+}
+.content .messageList .messageHeader{
+	height: 30px;
+	border-bottom: 1px solid #d2d2d2;
+}
+.content .messageList .messageHeader input{
+	float: left;
+	margin-left: 8px;
+	margin-top: 9px;
+}
+.content .messageList .messageHeader p{
+	width: 500px;
+	float: left;
+	font-size: 14px;
+	margin: 6px 0;
+	margin-left: 8px;
+}
+.content .messageList .messageHeader a{
+	display: inline-block;
+	float: right;
+	margin-right: 8px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	width:50px;
+	color:#F91B1B;
+	font-size: 14px;
+}
+.content .messageList .messageHeader a:hover{
+	border: 1px dotted #d2d2d2;
+}
+.content .messageList .messageContent{
+	margin-top: 30px;
+	height: 74px;
+}
+.content .messageList .messageContent .summary{
+	height: 45px;
+	width:780px;
+	margin:0 auto 20px;
+	text-indent: 2em;
+	color: #7E7C7C;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	display: -webkit-box;  
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical;
+}
+.content .messageList .messageContent .contentFooter{
+	height: 28px;
+	line-height: 28px;
+	width:100%;
+	font-size: 14px;
+	border-top: 1px solid #d2d2d2;
+	color: #B5B5B5;
+}
+.contentFooter .partOne{
+	float: left;
+	margin-left: 10px;
+}
+.contentFooter .partTwo{
+	float: right;
+	margin-right: 20px;
+}
+.contentFooter .partThree a{
+	display: inline-block;
+	width: 60px;
+	height: 28px;
+	background-color: #000;
+	color: #fff;
+	float: right;
+	text-align: center;
+}
+.content .footer{
+	height: 50px;
+	height: 28px;
+	width:100%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #fff;
+}
+.content #pagination {
+  font-size: 14px;
+  height: 50px;
+  width:380px;
+  float: right;
+}
+.content #pagination em {
+  font-style: normal;
+}
+.content #pagination input {
+  width: 25px;
+  height: 20px;
+  line-height: 15px;
+}
+.content #pagination #gotoBtn {
+  font-size: 12px;
+  display: inline-block;
+  width: 26px;
+  height: 25px;
+  line-height: 25px;
+  padding: 1px 3px;
+  background-color: #12B5B2;
+  color: #ffffff;
+  border-radius: 3px;
+}
+.content #prevNext .prev-next-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  text-align: center;
+  background-color: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  font-size: 3px;
+  color: #ffffff;
+}
+.content #nextBtn {
+  background-color: #ffffff !important;
+  color: #AAAAAA !important;
+}
+.content .totalNum,
+.content .pageNum,
+.content #prevNext,
+.content .goto {
+  margin-right: 30px;
+}
+
+.selected{
+	border: 1px solid #14B5B0;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}

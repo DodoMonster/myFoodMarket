@@ -1,0 +1,67 @@
+// out: ../../asider.css,sourcemap:false,compress:false
+
+@import "variables.less";
+@import "public.less";
+ body{
+     background-color: #2A2D32;
+     font-size: @asider-nav-font-size;
+ }
+#logo{
+    height:@logoHei;
+    line-height: @logoHei;
+    margin:0 auto;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    span{
+        height:40px;
+        font-size: 20px;
+        color:#fff;
+        padding:15px 30px;
+        border-radius:50px;
+        i{
+            color:#eee;
+        }
+    }
+}
+li.active{
+    background-color:#22252A;
+    border-bottom:3px solid #000;
+}
+li:hover{
+    background-color: #22252A;
+}
+.circle{
+    display: inline-block;
+    width:6px;
+    height:6px;
+    border:1px solid #8f8787;
+    border-radius:50%;
+    background-color:#8f8787;
+    margin-left: -6px;
+}
+.nav>li{
+    border-bottom: 1px solid rgba(120,122,121,0.1);
+    height:55px;
+    line-height: 55px;
+    vertical-align: middle;
+    a{
+        line-height: 35px;
+        color:@nav-color;
+        margin-left: 30px;
+    }
+}
+#childUl{
+    font-size: @asider-two-nav-font-size;
+    display: none;
+    li{
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        border-bottom: 1px solid rgba(120, 122, 121, 0.1);
+        margin-left: -30px;
+    }
+    a{
+        color: #8f8787;
+        padding-left: -20px;
+    }
+}

@@ -1,0 +1,73 @@
+
+
+.btns{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:1% 0;
+    text-align: center;
+    background-color:white;
+}
+
+#editBtn{
+
+}
+
+.top{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:1% 3%;
+    margin:0;
+    background-color:white;
+}
+
+#searchInput{
+    width: 20%;
+    display: inline-block;
+    float: right;
+}
+
+#searchBtn{
+    float: right;
+}
+
+.table{
+    width:94%;
+    margin:1% 3%;
+    border:1px solid gainsboro;
+}
+
+.table th,.table td{
+
+    border:1px solid gainsboro;
+}
+
+.tableNotInBind{
+    margin-top:5%;
+}
+
+.tableInBind{
+    margin-top:7%;
+    margin-bottom: 7%;
+}
+
+
+.myTable {
+	border:1px solid gainsboro;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.myTable td {
+	text-align: right;
+	border:1px solid gainsboro;
+}
+
+.footer-page{
+    position:fixed;
+    bottom:1%;
+    width:100%;
+    background-color:white;
+}

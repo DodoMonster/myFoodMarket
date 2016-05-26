@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scau.zxck.dao.admin.MerchantGroupDao">
+    <cache/>
+
+    <resultMap id="merchantGroupResult" type="MerchantGroup">
+        <result column="merchant_id" property="merchantId"></result>
+    </resultMap>
+
+    <insert id="add" parameterType="SQLAdapter">
+        ${sql}
+    </insert>
+
+    <update id="update" parameterType="SQLAdapter">
+        ${sql}
+    </update>
+
+    <delete id="delete" parameterType="SQLAdapter">
+        ${sql}
+    </delete>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="find" parameterType="SQLAdapter" resultMap="merchantGroupResult" >
+        ${sql}
+    </select>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="list" parameterType="SQLAdapter" resultMap="merchantGroupResult" >
+        ${sql}
+    </select>
+
+    <select id="count" parameterType="SQLAdapter" resultType="long" >
+        ${sql}
+    </select>
+
+    <select id="selectMerchantByName" parameterType="String" resultMap="merchantGroupResult">
+        SELECT * FROM apt_merchant_group WHERE apt_merchant_group.name = #{name};
+    </select>
+
+
+</mapper>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scau.zxck.dao.admin.UserDao">
+    <cache/>
+
+    <insert id="add" parameterType="SQLAdapter">
+        ${sql}
+    </insert>
+
+    <update id="update" parameterType="SQLAdapter">
+        ${sql}
+    </update>
+
+    <delete id="delete" parameterType="SQLAdapter">
+        ${sql}
+    </delete>
+
+    <resultMap id="userResult" type="User">
+        <result column="create_date" property="createDate"/>
+    </resultMap>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="find" parameterType="SQLAdapter" resultMap="userResult" >
+        ${sql}
+    </select>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="list" parameterType="SQLAdapter" resultMap="userResult" >
+        ${sql}
+    </select>
+
+    <select id="count" parameterType="SQLAdapter" resultType="long" >
+        ${sql}
+    </select>
+
+    <resultMap id="userResultMap" type="scau.zxck.entity.admin.User">
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <result column="create_date" property="createDate"/>
+        <result column="available" property="available" />
+        <result column="remark" property="remark" />
+        <collection property="userRoles" ofType="scau.zxck.entity.admin.UserRole">
+            <result column="role_id" property="roleId"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectUserFetchUserRole" parameterType="String" resultMap="userResultMap">
+        select * from apt_user,apt_user_role where apt_user.id=apt_user_role.user_id and apt_user.username=#{username};
+    </select>
+
+    <!--<select id="listUserAllReferenceMsg" parameterType="String" resultType="scau.zxck.vo.memberMessage">-->
+        <!--select-->
+        <!--u.id as "userId",-->
+        <!--u.username,-->
+        <!--u.owner_id as "studentId",-->
+        <!--s.`name` as "name",-->
+        <!--s.number,-->
+        <!--s.grade,-->
+        <!--s.profession,-->
+        <!--s.class as "className",-->
+        <!--s.address,-->
+        <!--s.contact,-->
+        <!--s.pic,-->
+        <!--p.project,-->
+        <!--st.station-->
+        <!--from sys_user u-->
+        <!--LEFT OUTER JOIN adm_student s ON s.id = u.owner_id-->
+        <!--LEFT OUTER JOIN adm_project_team_station ps on ps.student_id = s.id-->
+        <!--LEFT OUTER JOIN adm_project_team p ON p.id = ps.project_id-->
+        <!--LEFT OUTER JOIN adm_stations st ON st.id = ps.station_id-->
+        <!--where u.username = #{username};-->
+    <!--</select>-->
+
+</mapper>

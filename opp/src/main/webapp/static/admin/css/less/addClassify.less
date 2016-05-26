@@ -1,0 +1,124 @@
+//out:../addClassify.css
+
+@import "block/variables.less";
+@import "block/publicLayer.less";
+* {
+  margin: 0;
+  padding: 0;
+}
+.clear{
+    clear:both;
+}
+body{
+    background: @main-bacg;
+    font-family: @font-family-weiruan;
+    font-size: @main-font-size;
+    color:@main-color;
+}
+button,select,input{
+    font-family:@font-family-weiruan;
+}
+input{
+    padding-left: 5px;
+}
+select{
+    color:@main-color;
+    height: 24px;
+}
+button{
+    outline: none;
+    border:1px solid  #009f95;
+    background-color: #009f95;
+    color:#fff;
+}
+button:hover{
+    opacity: 0.9;
+}
+#addClassifyWrapper{
+    width:@addclass-width;
+    height: auto;
+    margin:0 auto;
+    margin-top: 8%;
+    background-color: @addclass-bacg;
+    box-shadow: @div-box-shadow;
+    padding-bottom: 30px;
+}
+#addClassify{
+    width:300px;
+    margin:0 auto;
+    border:1px solid #ffffff;
+}
+#newTagDiv{
+    height: 150px;
+    border: 1px solid #A0A0A0;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#formInput{
+    margin-bottom: 10px;
+    input{
+        width:auto;
+        height:20px;
+        margin-bottom: 10px;
+    }
+}
+p.newTag{
+    width:285px;
+    margin: 10px auto;
+    .opt{
+        float: right;
+        .fa{
+            margin-right: 10px;
+        }
+    }
+}
+p.newTag{
+    .fa-check{
+        color:#2AAB23;
+    }
+    .fa-close{
+        color:#f00f00;
+    }
+}
+#formHeader{
+    background-color: @addclass-header-bacg;
+    height:42px;
+    line-height: 42px;
+    color: #ffffff;
+    padding-left: 5px;
+    margin-bottom:20px;
+}
+#formContent{
+    width:550px;
+    margin: 0 auto;
+}
+input.editTag{
+    height:20px;
+    width:80px;
+}
+#addBtn{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+}
+
+#formBtn{
+    float: right;
+    margin-right: -100px;
+    margin-top: 50px;
+    button{
+        width:60px;
+        height:30px;
+        border-radius: @button-border-radius;
+        background-color: @addclass-button-bacg;
+        font-size: 14px;
+        margin-right: 20px;
+    }
+}
+#footer{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 15px;
+}

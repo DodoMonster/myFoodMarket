@@ -1,0 +1,293 @@
+/*-font-type-*/
+/*font size*/
+/*font-color*/
+/*-background-color-*/
+/*-div Size-*/
+/*border-radius size*/
+/*margin padding*/
+/*font-weight*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  overflow-x: hidden;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select {
+  font-family: 'Microsoft YaHei' !important;
+  padding-left: 3px !important;
+}
+a {
+  text-decoration: none;
+}
+ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+.layui-layer-title {
+  text-align: left !important;
+}
+.layui-layer-content {
+  padding: 0 !important;
+  font-size: 15px !important;
+  top: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  height: 30px!important;
+}
+.layui-layer-btn a {
+  font-weight: lighter !important;
+}
+/*
+@name: editGoods.less
+@out:editGoods.css
+@description: Style of top 商品信息编辑页面
+@author: DodoMonster(dodomonster@qq.com)
+@2016.04.10
+*/
+/*--- start 商品评论管理页面的css ---*/
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+  color: #888888;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 13px;
+  /*---start 返回按钮---*/
+  /*---end 返回按钮---*/
+  /*---start 评论回复---*/
+  /*---end 评论回复---*/
+  /*--- start 分页---*/
+  /*--- end 分页---*/
+}
+.wrapper header {
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+.wrapper h1 {
+  font-size: 16px;
+  color: #12B5B2;
+  font-weight: normal;
+  text-align: left;
+}
+.wrapper b {
+  font-weight: 400;
+}
+.wrapper .comments-header {
+  height: 200px;
+  /*---start 好评度---*/
+  /*---end 好评度---*/
+  /*---start 买家印象---*/
+  /*---end 买家印象---*/
+}
+.wrapper .comments-header .goods-degree {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  float: left;
+}
+.wrapper .comments-header .goods-degree p {
+  margin-top: 30px;
+  font-size: 16px;
+}
+.wrapper .comments-header .goods-degree #degree {
+  font-size: 50px;
+  color: #12B5B2;
+  margin-left: 15px;
+}
+.wrapper .comments-header .buyer-impression {
+  width: 600px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 50px;
+}
+.wrapper .comments-header .buyer-impression p {
+  text-align: left;
+  font-size: 16px;
+}
+.wrapper .comments-header .buyer-impression ul li {
+  background-color: #12B5B2;
+  float: left;
+  color: #fff;
+  margin-right: 15px;
+  width: 120px;
+  margin-top: 15px;
+  font-weight: lighter;
+  padding: 3px 0;
+}
+.wrapper .back-btn {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #12B5B2;
+  border-radius: 50%;
+  display: inline-block;
+  float: right;
+  position: fixed;
+  top: 30%;
+  right: 8%;
+}
+.wrapper .back-btn .fa {
+  color: #fff;
+}
+.wrapper .reply-comments {
+  margin-bottom: 50px;
+  /*---start 评论导航---*/
+  /*---end 评论导航---*/
+  /*---start 买家信息---*/
+  /*---end 买家信息---*/
+}
+.wrapper .reply-comments .comments-nav {
+  background-color: #EEEEEE;
+}
+.wrapper .reply-comments .comments-nav li {
+  float: left;
+  height: 25px;
+  width: 130px;
+  line-height: 25px;
+}
+.wrapper .reply-comments .comments-nav .on {
+  color: #f00;
+}
+.wrapper .reply-comments .buyer-comments {
+  margin-top: 20px;
+  border-bottom: 1px solid #12B5B2;
+}
+.wrapper .reply-comments .buyer-comments .buyer {
+  float: left;
+  margin-bottom: 20px;
+}
+.wrapper .reply-comments .buyer-comments .buyer img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.wrapper .reply-comments .buyer-comments .buyer p {
+  margin-top: 10px;
+}
+.wrapper .reply-comments .buyer-comments .buyer .author {
+  font-size: 15px;
+  color: #000;
+}
+.wrapper .reply-comments .buyer-comments .buyer .rank {
+  color: #12B5B2;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail {
+  width: 750px;
+  text-align: left;
+  margin-left: 150px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail p {
+  margin-bottom: 20px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail p i {
+  color: #DB5120;
+  margin-right: 10px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .comments {
+  margin-bottom: 20px;
+  width: 680px;
+  min-height: 66px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .comments p {
+  font-size: 15px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .comments .images {
+  margin-bottom: 10px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .comments .images img {
+  width: 150px;
+  height: 100px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .reply-content {
+  color: #AF874D;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .input-box textarea {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+.wrapper .reply-comments .buyer-comments .comments-detail .input-box .confirm-cancel {
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  z-index: 99;
+  color: #f00;
+}
+.wrapper .reply-comments .buyer-comments .time {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.wrapper .reply-comments .buyer-comments .time em {
+  font-style: normal;
+}
+.wrapper .reply-comments .buyer-comments .time .reply-btn {
+  float: right;
+  margin-right: 20px;
+}
+.wrapper .reply-comments .buyer-comments .time .fa {
+  color: #f00;
+}
+.wrapper #pagination {
+  float: right;
+  margin-right: 50px;
+  font-size: 14px;
+}
+.wrapper #pagination em {
+  font-style: normal;
+}
+.wrapper #pagination input {
+  width: 25px;
+  height: 20px;
+  line-height: 15px;
+}
+.wrapper #pagination #gotoBtn {
+  font-size: 12px;
+  display: inline-block;
+  width: 26px;
+  height: 25px;
+  line-height: 25px;
+  padding: 1px 3px;
+  background-color: #12B5B2;
+  color: #ffffff;
+  border-radius: 3px;
+}
+.wrapper #prevNext .prev-next-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  text-align: center;
+  background-color: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  font-size: 3px;
+  color: #ffffff;
+}
+.wrapper #nextBtn {
+  background-color: #ffffff !important;
+  color: #AAAAAA !important;
+}
+.wrapper .totalNum,
+.wrapper .pageNum,
+.wrapper #prevNext,
+.wrapper .goto {
+  margin-right: 30px;
+}
+.wrapper .back-btn {
+  color: #E6996F;
+}
+/*--- end 商品评论管理页面的css ---*/

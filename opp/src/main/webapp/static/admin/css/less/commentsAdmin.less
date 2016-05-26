@@ -1,0 +1,257 @@
+//out:../commentsAdmin.css
+
+@import "block/variables.less";
+@import "block/public.less";
+@import "block/publicLayer.less";
+/*
+@name: editGoods.less
+@out:editGoods.css
+@description: Style of top 商品信息编辑页面
+@author: DodoMonster(dodomonster@qq.com)
+@2016.04.10
+*/
+
+/*--- start 商品评论管理页面的css ---*/
+.wrapper{
+    width:900px;
+    margin:0 auto;
+    color:@editInfo-font;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: @comments-font-size;
+    header{
+        height:@page-header-height;
+        line-height:@page-header-height;
+        margin-bottom: @header-margin-bottom;
+    }
+    h1{
+        font-size: @h1-font-size;
+        color:@editInfo-color;
+        font-weight: normal;
+        text-align:left;
+    }
+    b{
+        font-weight: 400;
+    }
+    .comments-header{
+        height: 200px;
+        /*---start 好评度---*/
+        .goods-degree{
+            width:150px;
+            height:150px;
+            border:1px solid #eee;
+            border-radius: 50%;
+            float:left;
+            p{
+                margin-top:30px;
+                font-size: 16px;
+            }
+            #degree{
+                font-size: 50px;
+                color: @editInfo-color;
+                margin-left: 15px;
+            }
+        }
+        /*---end 好评度---*/
+
+        /*---start 买家印象---*/
+        .buyer-impression{
+            width:600px;
+            margin-top: 20px;
+            float:left;
+            margin-left:50px;
+            p{
+                text-align: left;
+                font-size: 16px;
+            }
+            ul{
+
+                li{
+                    background-color: @editInfo-color;
+                    float: left;
+                    color: #fff;
+                    margin-right: 15px;
+                    width:120px;
+                    margin-top: 15px;
+                    font-weight: lighter;
+                    padding: 3px 0;
+                }
+            }
+        }
+        /*---end 买家印象---*/
+    }
+
+    /*---start 返回按钮---*/
+    .back-btn{
+        width:30px;
+        height: 30px;
+        line-height: 30px;
+        background-color: @editInfo-color;
+        border-radius: 50%;
+        display: inline-block;
+        float: right;
+        position: fixed;
+        top:30%;
+        right: 8%;
+        .fa{
+            color: #fff;
+        }
+    }
+    /*---end 返回按钮---*/
+
+    /*---start 评论回复---*/
+    .reply-comments{
+        margin-bottom: 50px;
+        /*---start 评论导航---*/
+        .comments-nav{
+            background-color:#EEEEEE;
+            li{
+                float: left;
+                height:25px;
+                width: 130px;
+                line-height: 25px;
+            }
+            .on{
+                color:#f00;
+            }
+        }
+        /*---end 评论导航---*/
+
+        /*---start 买家信息---*/
+        .buyer-comments{
+            margin-top: 20px;
+            border-bottom: 1px solid @editInfo-color;
+            .buyer{
+                float: left;
+                margin-bottom:20px;
+                img{
+                    width:80px;
+                    height: 80px;
+                    border-radius:50%;
+                }
+                p{
+                    margin-top: 10px;
+                }
+                .author{
+                    font-size: 15px;
+                    color: #000;
+                }
+                .rank{
+                    color: @editInfo-color;
+                }
+            }
+            .comments-detail{
+                width:750px;
+                text-align: left;
+                margin-left: 150px;
+                p{
+                    margin-bottom: 20px;
+                    i{
+                        color:#DB5120;
+                        margin-right: 10px;
+                    }
+                }
+                .comments{
+                    margin-bottom: 20px;
+                    width:680px;
+                    min-height: 66px;
+                    p{
+                        font-size: 15px;
+                    }
+                    .images{
+                        margin-bottom: 10px;
+                        img{
+                            width:150px;
+                            height:100px;
+                        }
+                    }
+                }
+                .reply-content{
+                    color:#AF874D;
+                }
+                .input-box{
+                    textarea{
+                        padding-left: 3px;
+                        padding-top: 3px;
+                    }
+                    .confirm-cancel{
+                        float: right;
+                        margin-right: 20px;
+                        margin-bottom: 10px;
+                        z-index: 99;
+                        color: #f00;
+                    }
+                }
+            }
+            .time{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                em{
+                    font-style: normal;
+                }
+                .reply-btn{
+                    float: right;
+                    margin-right: 20px;
+                }
+                .fa{
+                    color:#f00;
+                }
+            }
+        }
+        /*---end 买家信息---*/
+    }
+    /*---end 评论回复---*/
+
+    /*--- start 分页---*/
+    #pagination {
+      float: right;
+      margin-right: 50px;
+      font-size: 14px;
+    }
+    #pagination em {
+      font-style: normal;
+    }
+    #pagination input {
+      width: 25px;
+      height: 20px;
+      line-height: 15px;
+    }
+    #pagination #gotoBtn {
+      font-size: 12px;
+      display: inline-block;
+      width: 26px;
+      height: 25px;
+      line-height: 25px;
+      padding: 1px 3px;
+      background-color: #12B5B2;
+      color: #ffffff;
+      border-radius: 3px;
+    }
+    #prevNext .prev-next-btn {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 19px;
+      text-align: center;
+      background-color: #AAAAAA;
+      border: 1px solid #AAAAAA;
+      border-radius: 3px;
+      font-size: 3px;
+      color: #ffffff;
+    }
+    #nextBtn {
+      background-color: #ffffff !important;
+      color: #AAAAAA !important;
+    }
+    .totalNum,
+    .pageNum,
+    #prevNext,
+    .goto {
+      margin-right: 30px;
+    }
+    .back-btn{
+        color: #E6996F;
+    }
+    /*--- end 分页---*/
+}
+/*--- end 商品评论管理页面的css ---*/

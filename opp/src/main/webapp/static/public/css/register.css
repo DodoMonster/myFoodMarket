@@ -1,0 +1,92 @@
+.tip{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#head1{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:#A2C8F5 #A2C8F5 #A2C8F5 transparent;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#tail1{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:transparent transparent transparent #A2C8F5;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#head2{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:#E4E4E4 #E4E4E4 #E4E4E4 transparent;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#tail2{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:transparent transparent transparent #E4E4E4;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#head3{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:#E4E4E4 #E4E4E4 #E4E4E4 transparent;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#tail3{
+    border-width:19px;
+    border-style:solid dashed dashed;
+    border-color:transparent transparent transparent #E4E4E4;
+    font-size:0;
+    line-height:0;
+    position: relative;
+    bottom: 5px;
+}
+
+#color1,#color2,#color3{
+    display: inline-block;
+    width: 20%;
+    color: white;
+    padding: 0.5%;
+    font-size: 1.2em;
+}
+
+#color1{
+    background-color: #A2C8F5;
+    border-radius: 10px 0 0 10px;
+}
+#color2{
+    background-color: #E4E4E4;
+}
+#color3{
+    background-color: #E4E4E4;
+    border-radius: 0 10px 10px 0;
+}
+
+
+#showMistake{
+    position: absolute;
+    top: 28%;
+    right: 13%;
+}

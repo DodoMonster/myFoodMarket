@@ -1,0 +1,130 @@
+/*-font-type-*/
+/*font size*/
+/*font-color*/
+/*-background-color-*/
+/*-div Size-*/
+/*border-radius size*/
+/*margin padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  color: #888888;
+}
+.header-wrapper {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.header-wrapper .titleName {
+  padding-left: 15%;
+}
+.header-wrapper .component {
+  float: right;
+}
+.header-wrapper .component span {
+  margin-right: 20px;
+}
+.header-wrapper .component .fa {
+  font-size: 20px;
+}
+.asider-wrapper {
+  background-color: #2A2D32;
+  font-size: 14px;
+  width: 14%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  min-width:188px;
+}
+#logo {
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+#logo span {
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+#logo span i {
+  color: #eee;
+}
+li.active {
+  background-color: #22252A;
+  border-bottom: 3px solid #000;
+}
+li:hover {
+  background-color: #22252A;
+}
+.circle {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #8f8787;
+  border-radius: 50%;
+  background-color: #8f8787;
+  margin-left: -6px;
+}
+.nav > li {
+  border-bottom: 1px solid rgba(120, 122, 121, 0.1);
+  height: 55px;
+  line-height: 55px;
+  vertical-align: middle;
+}
+.nav > li a {
+  line-height: 35px;
+  color: #ffffff;
+  margin-left: 30px;
+}
+#childUl {
+  font-size: 13px;
+  display: none;
+}
+#childUl li {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-bottom: 1px solid rgba(120, 122, 121, 0.1);
+  margin-left: -30px;
+}
+#childUl a {
+  color: #8f8787;
+  display: inline-block;
+  width: 100%;
+}
+#adminFrame{
+    width: 86%;
+	min-width: 500px;
+	height:-moz-calc(100% - 61px);
+	height:-webkit-calc(100% - 61px);
+	height: calc(100% - 61px);
+	position:absolute;
+	right:0;
+}

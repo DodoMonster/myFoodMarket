@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我家菜市后台管理-编辑消息</title>
+	<link rel="stylesheet" href="../../../public/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/editMessages.css">
+	
+	<script type="text/javascript" src="../../../public/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="../../../public/ueditor/ueditor.all.js"></script>
+	<script type="text/javascript" src="../../../public/ueditor/zh-cn.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../../../public/jquery-ui.css">
+	<script type="text/javascript" src="../../../public/js/jquery.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery-ui.js"></script>
+
+	<script type="text/javascript" src="../../../public/js/jquery-ui-timepicker-addon.js"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="messageTitle">
+			<div>
+				<label>消息标题</label>
+				<input type="text" id="messageTitle" name="messageTitle" />	
+			</div>	
+		</div>
+		<!-- messageTitle 结束 -->
+		<div class="editContent">
+			<p>内容编辑</p>
+			<textarea name="key" id="myEditor" class="contentEditor">这里写初始化内容</textarea>
+			<script type="text/javascript">
+				var editor= UE.getEditor('myEditor');
+			</script>
+		</div>
+		<!-- editContent 结束 -->
+		<div class="settings">
+			<p>发布设置</p>
+			<div class="settingsChoice">
+				<label>发送给：</label>
+				<a class="chooseObject">选择对象</a>
+				<div class="objectList">
+					<ul></ul>
+				</div>
+				<label>定时：</label>
+				<input type="text" id="datepicker" />
+			</div>
+			<a href="#" class="send" id="send">立即发送</a>
+			<a href="#" class="save" id="save">仅保存</a>
+		</div>
+		<!-- settings 结束 -->
+
+		<section>
+			<div id="linkDiv" class="boom-box display">
+				<div id="linkDivHeader">
+					<div class="nav-opt-btn">
+						<a class="navBtn user-nav">用户</a>
+						<a class="navBtn shop-nav">店铺</a>
+						<span>|</span>
+						<a class="navBtn all-nav">全选</a>
+						<a class="navBtn remove-all-nav">取消全选</a>
+						<a class="navBtn all-user-nav">全选用户</a>
+						<a class="navBtn all-shop-nav">全选店铺</a>
+
+					</div>
+					<div class="searchBox">
+						<input type="text" id="search">
+						<input type="button" class="searchBtn">
+					</div>
+				</div>
+				<!-- linkDivHeader 结束 -->
+				<div id="linkDivNav">
+					<ul id="userNav" class="groupClass" style="display: block;">
+						<li>分组：</li>
+						<li><a href="#">默认</a></li>
+						<li><a href="#">用户A组</a></li>
+						<li><a href="#">用户B组</a></li>
+						<li><a href="#">用户C组</a></li>
+						<li><a href="#">用户A组</a></li>
+						<li><a href="#">用户B组</a></li>
+						<li><a href="#">用户C组</a></li>
+					</ul>
+					<ul id="shopNav" class="groupClass" style="display: none;">
+						<li>分组：</li>
+						<li><a href="#">默认</a></li>
+						<li><a href="#">店铺A组</a></li>
+						<li><a href="#">店铺B组</a></li>
+						<li><a href="#">店铺C组</a></li>
+					</ul>
+					<a href="#" id="toggleShow">更多分组<i class="fa fa-angle-down"></i></a>
+				</div>
+				<!-- linkDivNav 结束 -->
+				<div id="linkDivContent">
+					<ul class="objectContainer" id="objectContainer">
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="shop" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="shop" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="shop" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="shop" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="shop" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+						<li>
+							<a href="#" class="ObjectName" title="我叫苏锐佳">我叫苏锐佳</a>
+							<input type="checkbox" name="user" value="我叫苏锐佳">
+						</li>
+					</ul>
+					<div id="pagination">
+                        <span class"totalnum"="">共<em id="totalNum">99</em>条</span>
+                        <span class="pageNum">
+                            <em id="nowPage">1</em>/<em id="totalPage">8</em>
+                        </span>
+                        <span id="prevNext">
+                            <span id="prevBtn" class="prev-next-btn">＜</span>
+                            <span id="nextBtn" class="prev-next-btn">＞</span>
+                        </span>
+                        <span class="goto">
+                            到第 <input type="text" id="gotoPage"> 页
+                            <span id="gotoBtn">GO</span>
+                        </span><!--需要限制输入只能为>0的数字-->
+                    </div>
+				</div>
+				<!-- linkDivContent 结束 -->
+				<div id="linkDivFooter">
+					<a href="#" class="cancel" id="cancel">取消</a>
+					<a href="#" class="confirm" id="confirm">确定</a>
+				</div>
+				<!-- linkDivFooter 结束 -->
+			</div>
+		</section>
+		<!-- section 结束 -->
+	</div>
+	<!-- wrapper 结束 -->
+	<script type="text/javascript" src="../../js/editMessages.js"></script>
+</body>
+	
+</html>

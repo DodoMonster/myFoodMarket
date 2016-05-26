@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scau.zxck.dao.admin.RoleDao">
+    <cache/>
+
+    <insert id="add" parameterType="SQLAdapter">
+        ${sql}
+    </insert>
+
+    <update id="update" parameterType="SQLAdapter">
+        ${sql}
+    </update>
+
+    <delete id="delete" parameterType="SQLAdapter">
+        ${sql}
+    </delete>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="find" parameterType="SQLAdapter" resultType="Role" >
+        ${sql}
+    </select>
+
+    <!--这里的resultType需要修改为实际的entity-->
+    <select id="list" parameterType="SQLAdapter" resultType="Role" >
+        ${sql}
+    </select>
+
+    <select id="count" parameterType="SQLAdapter" resultType="long" >
+        ${sql}
+    </select>
+
+    <resultMap id="roleResultMap" type="scau.zxck.entity.admin.Role">
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+        <result column="available" property="available" />
+        <result column="remark" property="remark" />
+        <collection property="rolePermissionsList" ofType="scau.zxck.entity.admin.RolePermissions">
+            <result column="permission_id" property="permissionId"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectRoleFetchRolePermissions" parameterType="String" resultMap="roleResultMap">
+        select * from apt_role,apt_role_permission where apt_role.id=apt_role_permission.role_id and apt_role.id=#{id};
+    </select>
+
+</mapper>
